@@ -1,8 +1,26 @@
-#login-page{
-   display:flex;
+#auth-page {
+   display: flex;
    flex-direction: column;
    gap: 0.5rem;
    justify-content: center;
-   align-items: center;  
-   background-color: aqua;
-}
+   align-items: center;
+ }
+ 
+ button {
+   border-radius: 0.5rem;
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 1rem;
+   font-weight: 500;
+   margin: 0;
+   padding: 0.5rem 1rem;
+   text-align: center;
+   vertical-align: middle;
+   min-width: 300px;
+ 
+   &.success {
+     background-color: #2ea44e;
+     border: 1px solid #2ea44e;
+   }
+ }
