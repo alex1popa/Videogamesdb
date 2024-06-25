@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { LogInPayload } from '../_helpers/interfaces/login.payload';
-import { AuthService } from '../_helpers/services/auth.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-auth',
