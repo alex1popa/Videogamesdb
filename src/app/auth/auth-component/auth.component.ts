@@ -11,7 +11,14 @@ import { AuthService } from '../_helpers/services/auth.service';
 })
 export class AuthComponent implements OnInit {
   rememberMe: boolean = false;
+  email: string ='';
+  password: string ='';
   userToken: string | null = '';
+
+  private predefinedEmail: string = 'eve.holt@reqres.in';
+  private predefinedPassword: string = 'cityslicka';
+
+
 
   constructor(private authService: AuthService, private router: Router, private notificationService: NzNotificationService) {}
 
@@ -71,5 +78,12 @@ export class AuthComponent implements OnInit {
       },
     });
   }
-
+  onRequest(email: string, password: string): void {
+    
+    if (email === this.predefinedEmail && password === this.predefinedPassword) {
+      this.onSuccessRequest();
+    } else {
+      this.onErrorRequest();
+    }
+  }
 }
