@@ -54,4 +54,11 @@ export class TableComponent implements OnInit {
     const endIndex = startIndex + this.pageSize;
     this.displayData = this.games.slice(startIndex, endIndex);
   }
+
+  deleteGame(name: string): void {
+    this.gameService.deleteGame(name).subscribe(data => {
+      this.games = data;
+      this.updateDisplayData();
+    });
+  }
 }

@@ -6,7 +6,7 @@
       <th nzWidth="10%" nzColumnKey="releaseYear" [nzSortFn]="true">Release Year</th>
       <th nzWidth="20%" nzColumnKey="developer" [nzSortFn]="true">Developer</th>
       <th nzWidth="20%" nzColumnKey="platform" [nzSortFn]="true">Platform</th>
-      <th nzWidth="5" nzColumnKey="delete">Delete</th>
+      <th nzWidth="5%" nzColumnKey="delete">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -16,7 +16,7 @@
       <td>{{ game.releaseYear }}</td>
       <td>{{ game.developer }}</td>
       <td>{{ game.platform }}</td>
-      <td>Delete</td>
+      <td><button (click)="deleteGame(game.name)">Delete</button></td>
     </tr>
   </tbody>
 </nz-table>

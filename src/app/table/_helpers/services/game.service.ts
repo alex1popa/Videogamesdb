@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Game } from '../models/game';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,22 @@ import { Game } from '../models/game';
 export class GameService {
 
   private jsonUrl = 'assets/games.json';
+  private games: Game[] = [];
 
   constructor(private http: HttpClient) { }
 
   getGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.jsonUrl);
+    if (this.games.length) {
+      return of(this.games);
+    } else {
+      return this.http.get<Game[]>(this.jsonUrl).pipe(
+        tap(data => this.games = data)
+      );
+    }
+  }
+
+  deleteGame(name: string): Observable<Game[]> {
+    this.games = this.games.filter(game => game.name !== name);
+    return of(this.games);
   }
 }
