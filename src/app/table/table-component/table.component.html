@@ -1,20 +1,28 @@
-<nz-table #basicTable [nzData]="games" [nzBordered]="true">
+<nz-table #basicTable [nzData]="displayData" [nzBordered]="true" [nzShowPagination]="false">
   <thead>
     <tr>
-      <th nzWidth="25%">Name</th>
-      <th nzWidth="20%">Genre</th>
-      <th nzWidth="15%">Release Year</th>
-      <th nzWidth="20%">Developer</th>
-      <th nzWidth="20%">Platform</th>
+      <th nzWidth="25%" nzColumnKey="name" [nzSortFn]="true">Name</th>
+      <th nzWidth="20%" nzColumnKey="genre" [nzSortFn]="true">Genre</th>
+      <th nzWidth="10%" nzColumnKey="releaseYear" [nzSortFn]="true">Release Year</th>
+      <th nzWidth="20%" nzColumnKey="developer" [nzSortFn]="true">Developer</th>
+      <th nzWidth="20%" nzColumnKey="platform" [nzSortFn]="true">Platform</th>
+      <th nzWidth="5" nzColumnKey="delete">Delete</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let game of games">
+    <tr *ngFor="let game of displayData">
       <td>{{ game.name }}</td>
       <td>{{ game.genre }}</td>
       <td>{{ game.releaseYear }}</td>
       <td>{{ game.developer }}</td>
       <td>{{ game.platform }}</td>
+      <td>Delete</td>
     </tr>
   </tbody>
 </nz-table>
+<nz-pagination
+  [(nzPageIndex)]="pageIndex"
+  [nzTotal]="games.length"
+  [nzPageSize]="pageSize"
+  (nzPageIndexChange)="onPageIndexChange($event)">
+</nz-pagination>

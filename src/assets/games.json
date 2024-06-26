@@ -14,7 +14,54 @@
       "releaseYear": 2018,
       "developer": "Santa Monica Studio",
       "platform": "PlayStation 4"
+    },
+    {
+      "id": 3,
+      "name": "Red Dead Redemption 2",
+      "genre": "Action-adventure",
+      "releaseYear": 2018,
+      "developer": "Rockstar Games",
+      "platform": "PlayStation 4, Xbox One, PC"
+    },
+    {
+      "id": 4,
+      "name": "The Witcher 3: Wild Hunt",
+      "genre": "Action RPG",
+      "releaseYear": 2015,
+      "developer": "CD Projekt Red",
+      "platform": "PlayStation 4, Xbox One, PC, Nintendo Switch"
+    },
+    {
+      "id": 5,
+      "name": "Horizon Zero Dawn",
+      "genre": "Action RPG",
+      "releaseYear": 2017,
+      "developer": "Guerrilla Games",
+      "platform": "PlayStation 4, PC"
+    },
+    {
+      "id": 6,
+      "name": "Spider-Man",
+      "genre": "Action-adventure",
+      "releaseYear": 2018,
+      "developer": "Insomniac Games",
+      "platform": "PlayStation 4"
+    },
+    {
+      "id": 7,
+      "name": "Cyberpunk 2077",
+      "genre": "Action RPG",
+      "releaseYear": 2020,
+      "developer": "CD Projekt Red",
+      "platform": "PlayStation 4, Xbox One, PC"
+    },
+    {
+      "id": 8,
+      "name": "Assassin's Creed Odyssey",
+      "genre": "Action RPG",
+      "releaseYear": 2018,
+      "developer": "Ubisoft",
+      "platform": "PlayStation 4, Xbox One, PC, Nintendo Switch"
     }
-    
   ]
   

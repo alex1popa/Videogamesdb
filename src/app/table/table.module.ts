@@ -11,6 +11,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { TableRoutingModule } from './table-routing.module';
 import { TableComponent } from './table-component/table.component';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TableComponent } from './table-component/table.component';
     NzSelectModule,
     NzButtonModule,
     NzIconModule,
+    NzPaginationModule
   ]
 })
 export class TableModule { }
