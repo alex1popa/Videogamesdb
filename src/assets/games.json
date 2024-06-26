@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "genre": "Action-adventure",
+      "releaseYear": 2017,
+      "developer": "Nintendo",
+      "platform": "Nintendo Switch"
+    },
+    {
+      "id": 2,
+      "name": "God of War",
+      "genre": "Action-adventure",
+      "releaseYear": 2018,
+      "developer": "Santa Monica Studio",
+      "platform": "PlayStation 4"
+    }
+    
+  ]
+  

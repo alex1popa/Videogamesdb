@@ -1,1 +1,20 @@
-<p>table works!</p>
+<nz-table #basicTable [nzData]="games" [nzBordered]="true">
+  <thead>
+    <tr>
+      <th nzWidth="25%">Name</th>
+      <th nzWidth="20%">Genre</th>
+      <th nzWidth="15%">Release Year</th>
+      <th nzWidth="20%">Developer</th>
+      <th nzWidth="20%">Platform</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let game of games">
+      <td>{{ game.name }}</td>
+      <td>{{ game.genre }}</td>
+      <td>{{ game.releaseYear }}</td>
+      <td>{{ game.developer }}</td>
+      <td>{{ game.platform }}</td>
+    </tr>
+  </tbody>
+</nz-table>
