@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { LogInPayload } from '../_helpers/interfaces/login.payload';
 import { AuthService } from '../_helpers/services/auth.service';
-
+import { ConfigService } from '../_helpers/services/file-reader.service';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -15,15 +15,28 @@ export class AuthComponent implements OnInit {
   password: string ='';
   userToken: string | null = '';
 
-  private predefinedEmail: string = 'eve.holt@reqres.in';
-  private predefinedPassword: string = 'cityslicka';
+  loginEmail: string = '';
+  loginPassword: string = '';
 
 
 
-  constructor(private authService: AuthService, private router: Router, private notificationService: NzNotificationService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router, 
+    private notificationService: NzNotificationService,
+    private configService: ConfigService
+  ) {}
 
   ngOnInit(): void {
     this.userToken = this.authService.getToken();
+    this.loadConfig();
+  }
+
+  loadConfig(): void{
+    this.configService.getConfig().subscribe(config => {
+      this.loginEmail = config.email;
+      this.loginPassword = config.password;
+    });
   }
 
   onSuccessRequest(): void {
@@ -78,9 +91,10 @@ export class AuthComponent implements OnInit {
       },
     });
   }
+
   onRequest(email: string, password: string): void {
     
-    if (email === this.predefinedEmail && password === this.predefinedPassword) {
+    if (email === this.loginEmail && password === this.loginPassword) {
       this.onSuccessRequest();
     } else {
       this.onErrorRequest();
