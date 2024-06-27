@@ -1,0 +1,37 @@
+.header {
+    text-align: center;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.table-page{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px 30px;
+}
+
+button{
+    border-radius: 0.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+    &.delete{
+        background-color: #f94449;
+        border: 1px solid #f94449;
+    }
+}
+
+.game-info{
+    color:black;
+    cursor:default;
+}
+
+

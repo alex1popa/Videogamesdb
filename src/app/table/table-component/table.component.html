@@ -1,31 +1,40 @@
-<nz-table #basicTable [nzData]="displayData" [nzBordered]="true" [nzShowPagination]="false">
-  <thead>
-    <tr>
-      <th nzWidth="25%" nzColumnKey="name">Name</th>
-      <th nzWidth="20%" nzColumnKey="genre">Genre</th>
-      <th nzWidth="10%" nzColumnKey="releaseYear">Release Year</th>
-      <th nzWidth="20%" nzColumnKey="developer">Developer</th>
-      <th nzWidth="20%" nzColumnKey="platform">Platform</th>
-      <th nzWidth="5%" nzColumnKey="delete">Delete</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let game of displayData">
-      <td><a (click)="showGameInfo(game)">{{ game.name }}</a></td>
-      <td>{{ game.genre }}</td>
-      <td>{{ game.releaseYear }}</td>
-      <td>{{ game.developer }}</td>
-      <td>{{ game.platform }}</td>
-      <td><button (click)="deleteGame(game.name)">Delete</button></td>
-    </tr>
-  </tbody>
-</nz-table>
-<nz-pagination
-  [(nzPageIndex)]="pageIndex"
-  [nzTotal]="games.length"
-  [nzPageSize]="pageSize"
-  (nzPageIndexChange)="onPageIndexChange($event)">
-</nz-pagination>
+<div class="header">
+  <div>Video Games DB</div>
+  <div (click)="logOut()" class="log-out-btn">
+    <span nz-icon nzType="logout" nzTheme="outline"></span>
+  </div>
+</div>
+
+<div class="table-page">
+  <nz-table #basicTable [nzData]="displayData" [nzBordered]="true" [nzShowPagination]="false">
+    <thead>
+      <tr>
+        <th nzWidth="25%" nzColumnKey="name">Name</th>
+        <th nzWidth="20%" nzColumnKey="genre">Genre</th>
+        <th nzWidth="10%" nzColumnKey="releaseYear">Release Year</th>
+        <th nzWidth="20%" nzColumnKey="developer">Developer</th>
+        <th nzWidth="20%" nzColumnKey="platform">Platform</th>
+        <th nzWidth="5%" nzColumnKey="delete">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of displayData">
+        <td><a class="game-info" (click)="showGameInfo(game)">{{ game.name }}</a></td>
+        <td>{{ game.genre }}</td>
+        <td>{{ game.releaseYear }}</td>
+        <td>{{ game.developer }}</td>
+        <td>{{ game.platform }}</td>
+        <td><button class="delete button" (click)="deleteGame(game.name)">Delete</button></td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <nz-pagination
+    [(nzPageIndex)]="pageIndex"
+    [nzTotal]="games.length"
+    [nzPageSize]="pageSize"
+    (nzPageIndexChange)="onPageIndexChange($event)">
+  </nz-pagination>
+</div>
 
 <nz-modal [(nzVisible)]="isVisible" nzTitle="Game Info" (nzOnCancel)="handleCancel()" [nzFooter]="null">
   <ng-container *nzModalContent>

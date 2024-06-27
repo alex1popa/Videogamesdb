@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Game } from '../_helpers/models/game';
 import { GameService } from '../_helpers/services/game.service';
 import { NzModalService } from 'ng-zorro-antd/modal';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
+import { AuthService } from 'src/app/auth/_helpers/services/auth.service';
 
 @Component({
   selector: 'app-table',
@@ -12,12 +12,14 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 export class TableComponent implements OnInit {
   games: Game[] = [];
   displayData: Game[] = [];
-  pageSize = 5;
+  pageSize = 10;
   pageIndex = 1;
   isVisible = false;
   selectedGame: Game | null = null;
 
-  constructor(private gameService: GameService, private modal: NzModalService) { }
+  constructor(private gameService: GameService, private modal: NzModalService, private authService:AuthService) {
+    
+   }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data => {
@@ -53,4 +55,9 @@ export class TableComponent implements OnInit {
   handleCancel(): void {
     this.isVisible = false;
   }
+
+  logOut() {
+    this.authService.logOut();
+  }
+
 }

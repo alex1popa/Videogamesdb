@@ -6,6 +6,7 @@ import { TableRoutingModule } from './table-routing.module';
 import { TableComponent } from './table-component/table.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzNotificationModule,
     NzPaginationModule,
     NzModalModule,
+    NzIconModule
   ]
 })
 export class TableModule { }
