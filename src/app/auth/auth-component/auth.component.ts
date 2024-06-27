@@ -84,42 +84,40 @@ export class AuthComponent implements OnInit {
     const nameVerifier = /^[a-zA-Z]{2,}$/;
     const emailVerifier = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const passwordVerifier = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
-    
-    console.log("before regex check");
+
     if (nameVerifier.test(this.firstNameRegister) && nameVerifier.test(this.lastNameRegister) &&
-        emailVerifier.test(this.emailRegister) &&
-        passwordVerifier.test(this.passwordRegister) && this.passwordRegister == this.passwordConfirmationRegister) {
-      console.log("after regex check")
-      console.log(this.credentials);
-      
-      
-      let newlyRegisterd: LogInPayload = {"email": this.emailRegister, "password": this.passwordRegister};
+      emailVerifier.test(this.emailRegister) &&
+      passwordVerifier.test(this.passwordRegister) && this.passwordRegister == this.passwordConfirmationRegister) {
+      //console.log(this.credentials);
+
+
+      let newlyRegisterd: LogInPayload = { "email": this.emailRegister, "password": this.passwordRegister };
 
       const credential = this.credentials.find(cred => cred.email === this.emailRegister);
 
-      if(!credential){
+      if (!credential) {
         this.credentials.push(newlyRegisterd);
         console.log("New account added");
       }
 
-      this.emailRegister = ''; 
+      this.emailRegister = '';
       this.passwordRegister = '';
       this.firstNameRegister = '';
       this.lastNameRegister = '';
       this.passwordConfirmationRegister = '';
     }
-    else{
-      if(! nameVerifier.test(this.firstNameRegister)){
+    else {
+      if (!nameVerifier.test(this.firstNameRegister)) {
         console.log("Incorrect first name format");
       }
-      
-      if(! nameVerifier.test(this.lastNameRegister)){
+
+      if (!nameVerifier.test(this.lastNameRegister)) {
         console.log("Incorrect last  name format");
       }
-      if(! emailVerifier.test(this.emailRegister)){
+      if (!emailVerifier.test(this.emailRegister)) {
         console.log("Incorrect email format");
       }
-      if(! passwordVerifier.test(this.passwordRegister)){
+      if (!passwordVerifier.test(this.passwordRegister)) {
         console.log("Incorrect password format");
       }
     }

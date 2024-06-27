@@ -1,4 +1,4 @@
-  <div class="auth-page">
+<div class="auth-page">
     <h1>Video Games DB</h1>
     <div class="credentials-container">
         <div id="login-credentials">
@@ -6,33 +6,39 @@
             <form>
                 <label for="login-email">Email:</label>
                 <input type="text" id="login-email" name="login-email" [(ngModel)]="email" required><br><br>
-    
+
                 <label for="login-password">Password:</label>
-                <input type="password" id="login-password" name="login-password" [(ngModel)]="password" required><br><br>
-                
+                <input type="password" id="login-password" name="login-password" [(ngModel)]="password"
+                    required><br><br>
+
                 <button class="button success" (click)="onRequest(email,password)">
                     Log In
                 </button>
             </form>
         </div>
-        
+
         <div id="register-credentials">
             <h2>Register</h2>
             <form>
                 <label for="register-first-name">First name:</label>
-                <input type="text" id="register-first-name" name="register-first-name" [(ngModel)]="firstNameRegister" required><br><br>
-    
+                <input type="text" id="register-first-name" name="register-first-name" [(ngModel)]="firstNameRegister"
+                    required><br><br>
+
                 <label for="register-last-name">Last name:</label>
-                <input type="text" id="register-last-name" name="register-last-name" [(ngModel)]="lastNameRegister" required><br><br>
-    
+                <input type="text" id="register-last-name" name="register-last-name" [(ngModel)]="lastNameRegister"
+                    required><br><br>
+
                 <label for="register-email">Email:</label>
-                <input type="text" id="register-email" name="register-email" [(ngModel)]="emailRegister" required><br><br>
-    
+                <input type="text" id="register-email" name="register-email" [(ngModel)]="emailRegister"
+                    required><br><br>
+
                 <label for="register-password">Password:</label>
-                <input type="password" id="register-password" name="register-password" [(ngModel)]="passwordRegister" required><br><br>
-                
+                <input type="password" id="register-password" name="register-password" [(ngModel)]="passwordRegister"
+                    required><br><br>
+
                 <label for="register-password-confirmation">Confirm password:</label>
-                <input type="password" id="register-password-confirmation" name="register-password-confirmation" [(ngModel)]="passwordConfirmationRegister" required><br><br>
+                <input type="password" id="register-password-confirmation" name="register-password-confirmation"
+                    [(ngModel)]="passwordConfirmationRegister" required><br><br>
 
                 <button class="button success" (click)="onRegister()">
                     Register

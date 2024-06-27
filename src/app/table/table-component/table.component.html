@@ -28,10 +28,7 @@
       </tr>
     </tbody>
   </nz-table>
-  <nz-pagination
-    [(nzPageIndex)]="pageIndex"
-    [nzTotal]="games.length"
-    [nzPageSize]="pageSize"
+  <nz-pagination [(nzPageIndex)]="pageIndex" [nzTotal]="games.length" [nzPageSize]="pageSize"
     (nzPageIndexChange)="onPageIndexChange($event)">
   </nz-pagination>
 </div>

@@ -17,9 +17,9 @@ export class TableComponent implements OnInit {
   isVisible = false;
   selectedGame: Game | null = null;
 
-  constructor(private gameService: GameService, private modal: NzModalService, private authService:AuthService) {
-    
-   }
+  constructor(private gameService: GameService, private modal: NzModalService, private authService: AuthService) {
+
+  }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data => {

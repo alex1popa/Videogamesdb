@@ -5,14 +5,14 @@
     padding: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
-  }
+}
 
-.table-page{
+.table-page {
     font-family: 'Courier New', Courier, monospace;
     padding: 20px 30px;
 }
 
-button{
+button {
     border-radius: 0.5rem;
     color: #ffffff;
     cursor: pointer;
@@ -23,15 +23,14 @@ button{
     padding: 0.5rem 1rem;
     text-align: center;
     vertical-align: middle;
-    &.delete{
+
+    &.delete {
         background-color: #f94449;
         border: 1px solid #f94449;
     }
 }
 
-.game-info{
-    color:black;
-    cursor:default;
+.game-info {
+    color: black;
+    cursor: default;
 }
-
-
