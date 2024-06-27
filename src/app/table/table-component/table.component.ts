@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../_helpers/models/game';
 import { GameService } from '../_helpers/services/game.service';
-import { NzTableSortOrder } from 'ng-zorro-antd/table';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 
 @Component({
   selector: 'app-table',
@@ -13,10 +14,10 @@ export class TableComponent implements OnInit {
   displayData: Game[] = [];
   pageSize = 5;
   pageIndex = 1;
-  sortKey: string | null = null;
-  sortValue: NzTableSortOrder | null = null;
+  isVisible = false;
+  selectedGame: Game | null = null;
 
-  constructor(private gameService: GameService) { }
+  constructor(private gameService: GameService, private modal: NzModalService) { }
 
   ngOnInit(): void {
     this.gameService.getGames().subscribe(data => {
@@ -30,25 +31,6 @@ export class TableComponent implements OnInit {
     this.updateDisplayData();
   }
 
-  onSort(sort: { key: string; value: NzTableSortOrder }): void {
-    this.sortKey = sort.key;
-    this.sortValue = sort.value;
-    this.sortData();
-    this.updateDisplayData();
-  }
-
-  sortData(): void {
-    if (this.sortKey && this.sortValue) {
-      this.games = [...this.games].sort((a, b) => {
-        const valA = a[this.sortKey as keyof Game];
-        const valB = b[this.sortKey as keyof Game];
-        return this.sortValue === 'ascend' 
-          ? valA > valB ? 1 : valA < valB ? -1 : 0 
-          : valB > valA ? 1 : valB < valA ? -1 : 0;
-      });
-    }
-  }
-
   updateDisplayData(): void {
     const startIndex = (this.pageIndex - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
@@ -60,5 +42,15 @@ export class TableComponent implements OnInit {
       this.games = data;
       this.updateDisplayData();
     });
+  }
+
+  showGameInfo(game: Game): void {
+    this.selectedGame = game;
+    console.log(game.releaseYear);
+    this.isVisible = true;
+  }
+
+  handleCancel(): void {
+    this.isVisible = false;
   }
 }

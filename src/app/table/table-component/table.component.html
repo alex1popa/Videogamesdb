@@ -1,17 +1,17 @@
 <nz-table #basicTable [nzData]="displayData" [nzBordered]="true" [nzShowPagination]="false">
   <thead>
     <tr>
-      <th nzWidth="25%" nzColumnKey="name" [nzSortFn]="true">Name</th>
-      <th nzWidth="20%" nzColumnKey="genre" [nzSortFn]="true">Genre</th>
-      <th nzWidth="10%" nzColumnKey="releaseYear" [nzSortFn]="true">Release Year</th>
-      <th nzWidth="20%" nzColumnKey="developer" [nzSortFn]="true">Developer</th>
-      <th nzWidth="20%" nzColumnKey="platform" [nzSortFn]="true">Platform</th>
+      <th nzWidth="25%" nzColumnKey="name">Name</th>
+      <th nzWidth="20%" nzColumnKey="genre">Genre</th>
+      <th nzWidth="10%" nzColumnKey="releaseYear">Release Year</th>
+      <th nzWidth="20%" nzColumnKey="developer">Developer</th>
+      <th nzWidth="20%" nzColumnKey="platform">Platform</th>
       <th nzWidth="5%" nzColumnKey="delete">Delete</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let game of displayData">
-      <td>{{ game.name }}</td>
+      <td><a (click)="showGameInfo(game)">{{ game.name }}</a></td>
       <td>{{ game.genre }}</td>
       <td>{{ game.releaseYear }}</td>
       <td>{{ game.developer }}</td>
@@ -26,3 +26,13 @@
   [nzPageSize]="pageSize"
   (nzPageIndexChange)="onPageIndexChange($event)">
 </nz-pagination>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Game Info" (nzOnCancel)="handleCancel()" [nzFooter]="null">
+  <ng-container *nzModalContent>
+    <p>Name: {{ selectedGame?.name }}</p>
+    <p>Genre:{{ selectedGame?.genre }}</p>
+    <p>Release Year: {{ selectedGame?.releaseYear }}</p>
+    <p>Developer: {{ selectedGame?.developer }}</p>
+    <p>Platform: {{ selectedGame?.platform }}</p>
+  </ng-container>
+</nz-modal>
