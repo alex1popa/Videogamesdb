@@ -1,67 +1,802 @@
 [
-    {
-      "id": 1,
-      "name": "The Legend of Zelda: Breath of the Wild",
-      "genre": "Action-adventure",
-      "releaseYear": 2017,
-      "developer": "Nintendo",
-      "platform": "Nintendo Switch"
-    },
-    {
-      "id": 2,
-      "name": "God of War",
-      "genre": "Action-adventure",
-      "releaseYear": 2018,
-      "developer": "Santa Monica Studio",
-      "platform": "PlayStation 4"
-    },
-    {
-      "id": 3,
-      "name": "Red Dead Redemption 2",
-      "genre": "Action-adventure",
-      "releaseYear": 2018,
-      "developer": "Rockstar Games",
-      "platform": "PlayStation 4, Xbox One, PC"
-    },
-    {
-      "id": 4,
-      "name": "The Witcher 3: Wild Hunt",
-      "genre": "Action RPG",
-      "releaseYear": 2015,
-      "developer": "CD Projekt Red",
-      "platform": "PlayStation 4, Xbox One, PC, Nintendo Switch"
-    },
-    {
-      "id": 5,
-      "name": "Horizon Zero Dawn",
-      "genre": "Action RPG",
-      "releaseYear": 2017,
-      "developer": "Guerrilla Games",
-      "platform": "PlayStation 4, PC"
-    },
-    {
-      "id": 6,
-      "name": "Spider-Man",
-      "genre": "Action-adventure",
-      "releaseYear": 2018,
-      "developer": "Insomniac Games",
-      "platform": "PlayStation 4"
-    },
-    {
-      "id": 7,
-      "name": "Cyberpunk 2077",
-      "genre": "Action RPG",
-      "releaseYear": 2020,
-      "developer": "CD Projekt Red",
-      "platform": "PlayStation 4, Xbox One, PC"
-    },
-    {
-      "id": 8,
-      "name": "Assassin's Creed Odyssey",
-      "genre": "Action RPG",
-      "releaseYear": 2018,
-      "developer": "Ubisoft",
-      "platform": "PlayStation 4, Xbox One, PC, Nintendo Switch"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-adventure",
+    "releaseYear": 2017,
+    "developer": "Nintendo",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 2,
+    "name": "Super Mario Bros.",
+    "genre": "Platformer",
+    "releaseYear": 1985,
+    "developer": "Nintendo",
+    "platform": "NES"
+  },
+  {
+    "id": 3,
+    "name": "Minecraft",
+    "genre": "Sandbox",
+    "releaseYear": 2011,
+    "developer": "Mojang",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 4,
+    "name": "The Witcher 3: Wild Hunt",
+    "genre": "Action RPG",
+    "releaseYear": 2015,
+    "developer": "CD Projekt Red",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 5,
+    "name": "Grand Theft Auto V",
+    "genre": "Action-adventure",
+    "releaseYear": 2013,
+    "developer": "Rockstar North",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 6,
+    "name": "Tetris",
+    "genre": "Puzzle",
+    "releaseYear": 1984,
+    "developer": "Alexey Pajitnov",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 7,
+    "name": "The Elder Scrolls V: Skyrim",
+    "genre": "Action RPG",
+    "releaseYear": 2011,
+    "developer": "Bethesda Game Studios",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 8,
+    "name": "Red Dead Redemption 2",
+    "genre": "Action-adventure",
+    "releaseYear": 2018,
+    "developer": "Rockstar Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 9,
+    "name": "The Last of Us",
+    "genre": "Action-adventure",
+    "releaseYear": 2013,
+    "developer": "Naughty Dog",
+    "platform": "PlayStation 3"
+  },
+  {
+    "id": 10,
+    "name": "Half-Life 2",
+    "genre": "First-person shooter",
+    "releaseYear": 2004,
+    "developer": "Valve",
+    "platform": "PC"
+  },
+  {
+    "id": 11,
+    "name": "BioShock",
+    "genre": "First-person shooter",
+    "releaseYear": 2007,
+    "developer": "Irrational Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 12,
+    "name": "Dark Souls",
+    "genre": "Action RPG",
+    "releaseYear": 2011,
+    "developer": "FromSoftware",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 13,
+    "name": "Super Mario 64",
+    "genre": "Platformer",
+    "releaseYear": 1996,
+    "developer": "Nintendo",
+    "platform": "Nintendo 64"
+  },
+  {
+    "id": 14,
+    "name": "Doom",
+    "genre": "First-person shooter",
+    "releaseYear": 1993,
+    "developer": "id Software",
+    "platform": "PC"
+  },
+  {
+    "id": 15,
+    "name": "Final Fantasy VII",
+    "genre": "JRPG",
+    "releaseYear": 1997,
+    "developer": "Square Enix",
+    "platform": "PlayStation"
+  },
+  {
+    "id": 16,
+    "name": "Metal Gear Solid",
+    "genre": "Action-adventure",
+    "releaseYear": 1998,
+    "developer": "Konami",
+    "platform": "PlayStation"
+  },
+  {
+    "id": 17,
+    "name": "The Legend of Zelda: Ocarina of Time",
+    "genre": "Action-adventure",
+    "releaseYear": 1998,
+    "developer": "Nintendo",
+    "platform": "Nintendo 64"
+  },
+  {
+    "id": 18,
+    "name": "World of Warcraft",
+    "genre": "MMORPG",
+    "releaseYear": 2004,
+    "developer": "Blizzard Entertainment",
+    "platform": "PC"
+  },
+  {
+    "id": 19,
+    "name": "Halo: Combat Evolved",
+    "genre": "First-person shooter",
+    "releaseYear": 2001,
+    "developer": "Bungie",
+    "platform": "Xbox"
+  },
+  {
+    "id": 20,
+    "name": "Chrono Trigger",
+    "genre": "JRPG",
+    "releaseYear": 1995,
+    "developer": "Square Enix",
+    "platform": "SNES"
+  },
+  {
+    "id": 21,
+    "name": "Mass Effect 2",
+    "genre": "Action RPG",
+    "releaseYear": 2010,
+    "developer": "BioWare",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 22,
+    "name": "Resident Evil 4",
+    "genre": "Survival horror",
+    "releaseYear": 2005,
+    "developer": "Capcom",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 23,
+    "name": "Persona 5",
+    "genre": "JRPG",
+    "releaseYear": 2016,
+    "developer": "Atlus",
+    "platform": "PlayStation 4"
+  },
+  {
+    "id": 24,
+    "name": "Portal 2",
+    "genre": "Puzzle-platformer",
+    "releaseYear": 2011,
+    "developer": "Valve",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 25,
+    "name": "Street Fighter II",
+    "genre": "Fighting",
+    "releaseYear": 1991,
+    "developer": "Capcom",
+    "platform": "Arcade"
+  },
+  {
+    "id": 26,
+    "name": "Overwatch",
+    "genre": "First-person shooter",
+    "releaseYear": 2016,
+    "developer": "Blizzard Entertainment",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 27,
+    "name": "StarCraft",
+    "genre": "Real-time strategy",
+    "releaseYear": 1998,
+    "developer": "Blizzard Entertainment",
+    "platform": "PC"
+  },
+  {
+    "id": 28,
+    "name": "The Sims",
+    "genre": "Simulation",
+    "releaseYear": 2000,
+    "developer": "Maxis",
+    "platform": "PC"
+  },
+  {
+    "id": 29,
+    "name": "Uncharted 2: Among Thieves",
+    "genre": "Action-adventure",
+    "releaseYear": 2009,
+    "developer": "Naughty Dog",
+    "platform": "PlayStation 3"
+  },
+  {
+    "id": 30,
+    "name": "Pac-Man",
+    "genre": "Arcade",
+    "releaseYear": 1980,
+    "developer": "Namco",
+    "platform": "Arcade"
+  },
+  {
+    "id": 31,
+    "name": "Call of Duty 4: Modern Warfare",
+    "genre": "First-person shooter",
+    "releaseYear": 2007,
+    "developer": "Infinity Ward",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 32,
+    "name": "God of War (2018)",
+    "genre": "Action-adventure",
+    "releaseYear": 2018,
+    "developer": "Santa Monica Studio",
+    "platform": "PlayStation 4"
+  },
+  {
+    "id": 33,
+    "name": "Assassin's Creed II",
+    "genre": "Action-adventure",
+    "releaseYear": 2009,
+    "developer": "Ubisoft",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 34,
+    "name": "The Legend of Zelda: A Link to the Past",
+    "genre": "Action-adventure",
+    "releaseYear": 1991,
+    "developer": "Nintendo",
+    "platform": "SNES"
+  },
+  {
+    "id": 35,
+    "name": "Castlevania: Symphony of the Night",
+    "genre": "Metroidvania",
+    "releaseYear": 1997,
+    "developer": "Konami",
+    "platform": "PlayStation"
+  },
+  {
+    "id": 36,
+    "name": "Final Fantasy X",
+    "genre": "JRPG",
+    "releaseYear": 2001,
+    "developer": "Square Enix",
+    "platform": "PlayStation 2"
+  },
+  {
+    "id": 37,
+    "name": "Bloodborne",
+    "genre": "Action RPG",
+    "releaseYear": 2015,
+    "developer": "FromSoftware",
+    "platform": "PlayStation 4"
+  },
+  {
+    "id": 38,
+    "name": "Diablo II",
+    "genre": "Action RPG",
+    "releaseYear": 2000,
+    "developer": "Blizzard Entertainment",
+    "platform": "PC"
+  },
+  {
+    "id": 39,
+    "name": "Celeste",
+    "genre": "Platformer",
+    "releaseYear": 2018,
+    "developer": "Maddy Makes Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 40,
+    "name": "Undertale",
+    "genre": "RPG",
+    "releaseYear": 2015,
+    "developer": "Toby Fox",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 41,
+    "name": "Hades",
+    "genre": "Roguelike",
+    "releaseYear": 2020,
+    "developer": "Supergiant Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 42,
+    "name": "Fortnite",
+    "genre": "Battle royale",
+    "releaseYear": 2017,
+    "developer": "Epic Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 43,
+    "name": "Splatoon 2",
+    "genre": "Third-person shooter",
+    "releaseYear": 2017,
+    "developer": "Nintendo",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 44,
+    "name": "Monster Hunter: World",
+    "genre": "Action RPG",
+    "releaseYear": 2018,
+    "developer": "Capcom",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 45,
+    "name": "League of Legends",
+    "genre": "MOBA",
+    "releaseYear": 2009,
+    "developer": "Riot Games",
+    "platform": "PC"
+  },
+  {
+    "id": 46,
+    "name": "Fallout: New Vegas",
+    "genre": "Action RPG",
+    "releaseYear": 2010,
+    "developer": "Obsidian Entertainment",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 47,
+    "name": "Dragon Age: Origins",
+    "genre": "Action RPG",
+    "releaseYear": 2009,
+    "developer": "BioWare",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 48,
+    "name": "Sekiro: Shadows Die Twice",
+    "genre": "Action-adventure",
+    "releaseYear": 2019,
+    "developer": "FromSoftware",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 49,
+    "name": "Persona 4 Golden",
+    "genre": "JRPG",
+    "releaseYear": 2012,
+    "developer": "Atlus",
+    "platform": "PlayStation Vita"
+  },
+  {
+    "id": 50,
+    "name": "Fire Emblem: Three Houses",
+    "genre": "Tactical RPG",
+    "releaseYear": 2019,
+    "developer": "Intelligent Systems",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 51,
+    "name": "Stardew Valley",
+    "genre": "Simulation",
+    "releaseYear": 2016,
+    "developer": "ConcernedApe",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 52,
+    "name": "Hollow Knight",
+    "genre": "Metroidvania",
+    "releaseYear": 2017,
+    "developer": "Team Cherry",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 53,
+    "name": "Dota 2",
+    "genre": "MOBA",
+    "releaseYear": 2013,
+    "developer": "Valve",
+    "platform": "PC"
+  },
+  {
+    "id": 54,
+    "name": "Final Fantasy XIV",
+    "genre": "MMORPG",
+    "releaseYear": 2013,
+    "developer": "Square Enix",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 55,
+    "name": "Cuphead",
+    "genre": "Run and gun",
+    "releaseYear": 2017,
+    "developer": "Studio MDHR",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 56,
+    "name": "Shadow of the Colossus",
+    "genre": "Action-adventure",
+    "releaseYear": 2005,
+    "developer": "Team Ico",
+    "platform": "PlayStation 2"
+  },
+  {
+    "id": 57,
+    "name": "Journey",
+    "genre": "Adventure",
+    "releaseYear": 2012,
+    "developer": "Thatgamecompany",
+    "platform": "PlayStation 3"
+  },
+  {
+    "id": 58,
+    "name": "Animal Crossing: New Horizons",
+    "genre": "Simulation",
+    "releaseYear": 2020,
+    "developer": "Nintendo",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 59,
+    "name": "Borderlands 2",
+    "genre": "Action RPG",
+    "releaseYear": 2012,
+    "developer": "Gearbox Software",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 60,
+    "name": "Baldur's Gate II: Shadows of Amn",
+    "genre": "RPG",
+    "releaseYear": 2000,
+    "developer": "BioWare",
+    "platform": "PC"
+  },
+  {
+    "id": 61,
+    "name": "Xenoblade Chronicles",
+    "genre": "Action RPG",
+    "releaseYear": 2010,
+    "developer": "Monolith Soft",
+    "platform": "Nintendo Wii"
+  },
+  {
+    "id": 62,
+    "name": "Super Smash Bros. Ultimate",
+    "genre": "Fighting",
+    "releaseYear": 2018,
+    "developer": "Bandai Namco Studios",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 63,
+    "name": "Silent Hill 2",
+    "genre": "Survival horror",
+    "releaseYear": 2001,
+    "developer": "Konami",
+    "platform": "PlayStation 2"
+  },
+  {
+    "id": 64,
+    "name": "Mario Kart 8 Deluxe",
+    "genre": "Racing",
+    "releaseYear": 2017,
+    "developer": "Nintendo",
+    "platform": "Nintendo Switch"
+  },
+  {
+    "id": 65,
+    "name": "Nier: Automata",
+    "genre": "Action RPG",
+    "releaseYear": 2017,
+    "developer": "PlatinumGames",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 66,
+    "name": "Batman: Arkham City",
+    "genre": "Action-adventure",
+    "releaseYear": 2011,
+    "developer": "Rocksteady Studios",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 67,
+    "name": "The Legend of Zelda: Majora's Mask",
+    "genre": "Action-adventure",
+    "releaseYear": 2000,
+    "developer": "Nintendo",
+    "platform": "Nintendo 64"
+  },
+  {
+    "id": 68,
+    "name": "Super Metroid",
+    "genre": "Metroidvania",
+    "releaseYear": 1994,
+    "developer": "Nintendo",
+    "platform": "SNES"
+  },
+  {
+    "id": 69,
+    "name": "Deus Ex",
+    "genre": "Action RPG",
+    "releaseYear": 2000,
+    "developer": "Ion Storm",
+    "platform": "PC"
+  },
+  {
+    "id": 70,
+    "name": "Gears of War",
+    "genre": "Third-person shooter",
+    "releaseYear": 2006,
+    "developer": "Epic Games",
+    "platform": "Xbox 360"
+  },
+  {
+    "id": 71,
+    "name": "Star Wars: Knights of the Old Republic",
+    "genre": "RPG",
+    "releaseYear": 2003,
+    "developer": "BioWare",
+    "platform": "Xbox"
+  },
+  {
+    "id": 72,
+    "name": "Dishonored",
+    "genre": "Action-adventure",
+    "releaseYear": 2012,
+    "developer": "Arkane Studios",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 73,
+    "name": "Shovel Knight",
+    "genre": "Platformer",
+    "releaseYear": 2014,
+    "developer": "Yacht Club Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 74,
+    "name": "Terraria",
+    "genre": "Sandbox",
+    "releaseYear": 2011,
+    "developer": "Re-Logic",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 75,
+    "name": "Inside",
+    "genre": "Puzzle-platformer",
+    "releaseYear": 2016,
+    "developer": "Playdead",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 76,
+    "name": "Rocket League",
+    "genre": "Sports",
+    "releaseYear": 2015,
+    "developer": "Psyonix",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 77,
+    "name": "Celeste",
+    "genre": "Platformer",
+    "releaseYear": 2018,
+    "developer": "Maddy Makes Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 78,
+    "name": "Splatoon",
+    "genre": "Third-person shooter",
+    "releaseYear": 2015,
+    "developer": "Nintendo",
+    "platform": "Wii U"
+  },
+  {
+    "id": 79,
+    "name": "Braid",
+    "genre": "Puzzle-platformer",
+    "releaseYear": 2008,
+    "developer": "Number None",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 80,
+    "name": "Horizon Zero Dawn",
+    "genre": "Action RPG",
+    "releaseYear": 2017,
+    "developer": "Guerrilla Games",
+    "platform": "PlayStation 4"
+  },
+  {
+    "id": 81,
+    "name": "Okami",
+    "genre": "Action-adventure",
+    "releaseYear": 2006,
+    "developer": "Clover Studio",
+    "platform": "PlayStation 2"
+  },
+  {
+    "id": 82,
+    "name": "Hades",
+    "genre": "Roguelike",
+    "releaseYear": 2020,
+    "developer": "Supergiant Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 83,
+    "name": "Cuphead",
+    "genre": "Run and gun",
+    "releaseYear": 2017,
+    "developer": "Studio MDHR",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 84,
+    "name": "Donkey Kong Country",
+    "genre": "Platformer",
+    "releaseYear": 1994,
+    "developer": "Rare",
+    "platform": "SNES"
+  },
+  {
+    "id": 85,
+    "name": "Control",
+    "genre": "Action-adventure",
+    "releaseYear": 2019,
+    "developer": "Remedy Entertainment",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 86,
+    "name": "Return of the Obra Dinn",
+    "genre": "Puzzle-adventure",
+    "releaseYear": 2018,
+    "developer": "3909 LLC",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 87,
+    "name": "Grim Fandango",
+    "genre": "Adventure",
+    "releaseYear": 1998,
+    "developer": "LucasArts",
+    "platform": "PC"
+  },
+  {
+    "id": 88,
+    "name": "The Witness",
+    "genre": "Puzzle-adventure",
+    "releaseYear": 2016,
+    "developer": "Thekla, Inc.",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 89,
+    "name": "Sekiro: Shadows Die Twice",
+    "genre": "Action-adventure",
+    "releaseYear": 2019,
+    "developer": "FromSoftware",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 90,
+    "name": "Fable II",
+    "genre": "Action RPG",
+    "releaseYear": 2008,
+    "developer": "Lionhead Studios",
+    "platform": "Xbox 360"
+  },
+  {
+    "id": 91,
+    "name": "Cuphead",
+    "genre": "Run and gun",
+    "releaseYear": 2017,
+    "developer": "Studio MDHR",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 92,
+    "name": "Celeste",
+    "genre": "Platformer",
+    "releaseYear": 2018,
+    "developer": "Maddy Makes Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 93,
+    "name": "Hollow Knight",
+    "genre": "Metroidvania",
+    "releaseYear": 2017,
+    "developer": "Team Cherry",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 94,
+    "name": "Hyper Light Drifter",
+    "genre": "Action RPG",
+    "releaseYear": 2016,
+    "developer": "Heart Machine",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 95,
+    "name": "Bastion",
+    "genre": "Action RPG",
+    "releaseYear": 2011,
+    "developer": "Supergiant Games",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 96,
+    "name": "Oxenfree",
+    "genre": "Adventure",
+    "releaseYear": 2016,
+    "developer": "Night School Studio",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 97,
+    "name": "Journey",
+    "genre": "Adventure",
+    "releaseYear": 2012,
+    "developer": "Thatgamecompany",
+    "platform": "PlayStation 3"
+  },
+  {
+    "id": 98,
+    "name": "Super Meat Boy",
+    "genre": "Platformer",
+    "releaseYear": 2010,
+    "developer": "Team Meat",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 99,
+    "name": "Undertale",
+    "genre": "RPG",
+    "releaseYear": 2015,
+    "developer": "Toby Fox",
+    "platform": "Multi-platform"
+  },
+  {
+    "id": 100,
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-adventure",
+    "releaseYear": 2017,
+    "developer": "Nintendo",
+    "platform": "Nintendo Switch"
+  }
+]
